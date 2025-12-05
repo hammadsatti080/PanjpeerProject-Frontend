@@ -9,6 +9,7 @@ import Review from '../Component/Homescreen/Review'
 import Areainfo from '../Component/Homescreen/Areainfo'
 import Activities from '../Component/Visitinfo/Activities'
 import Locations from '../Component/Visitinfo/Locations'
+import Randomweather from '../Component/Pictures/Gallerymodel/Randomweather'
 
 
 
@@ -23,7 +24,7 @@ export default function Homescreen() {
       <Activities/>
      <Visitorinfo/>
 <Sections/>
-
+<Randomweather/>
     </div>
   )
 }

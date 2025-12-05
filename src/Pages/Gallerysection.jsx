@@ -6,8 +6,8 @@ import Waterfall from '../Component/Pictures/Waterfall';
 import Mountain from '../Component/Pictures/Mountain';
 import Gallerynav from '../Component/Pictures/Gallerynav';
 import Snowfall from '../Component/Pictures/Snowfall';
-import Weather from '../Component/Pictures/Weather';
 import GalleryPages from '../Component/Pictures/Gallerymodel/GalleryPages';
+
 
 
 
@@ -28,7 +28,7 @@ export default function Gallerysection() {
  <Waterfall/>
  <Snowfall/>
  <GalleryPages/>
- <Weather/>
+
  
     </div>
   )

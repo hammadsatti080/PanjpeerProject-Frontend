@@ -77,14 +77,14 @@ const Location = () => {
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 mr-2 sm:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-                <span className="text-sm sm:text-base flex-1"><strong className="text-white">Distance from Rawalpindi:</strong> ~35 km</span>
+                <span className="text-sm sm:text-base flex-1"><strong className="text-white">Distance from Rawalpindi:</strong> ~75 km</span>
               </div>
               
               <div className="flex items-start text-gray-300">
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 mr-2 sm:mr-3 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
-                <span className="text-sm sm:text-base flex-1"><strong className="text-white">Travel Time:</strong> ~1 hour by road</span>
+                <span className="text-sm sm:text-base flex-1"><strong className="text-white">Travel Time:</strong> ~4 hour by road</span>
               </div>
               
               <div className="flex items-start text-gray-300">

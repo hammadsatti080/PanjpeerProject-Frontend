@@ -367,18 +367,7 @@ navigate("/Areainformation")
             ))}
           </div>
 
-          {/* View More Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-center mt-8 sm:mt-12"
-          >
-            <button className="bg-white text-gray-900 px-6 py-4 sm:px-8 sm:py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center mx-auto text-base active:scale-95">
-              View Full Gallery
-              <FiCamera className="ml-2 w-4 h-4" />
-            </button>
-          </motion.div>
+        
         </div>
       </section>
 
@@ -447,9 +436,7 @@ navigate("/Areainformation")
                 Kahuta Narh provides a refreshing retreat from city life. The area is known 
                 for its pleasant climate and stunning views of the surrounding hills and valleys.
               </p>
-              <button className="bg-white text-gray-900 px-6 py-4 sm:px-8 sm:py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 text-base active:scale-95 w-full sm:w-auto">
-                Learn More
-              </button>
+           
             </motion.div>
             
             <motion.div

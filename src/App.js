@@ -16,6 +16,13 @@ import Waterfall from "./Component/Pictures/Waterfall";
 import Mountain from "./Component/Pictures/Mountain";
 import Snowfall from "./Component/Pictures/Snowfall";
 import GalleryPage from "./Pages/GalleryPage";
+import Panjpeers from "./Pages/Panjpeers";
+import Query from "./Component/Navfolder/Panjpeer/Query";
+import Hotelsarea from "./Component/Navfolder/Panjpeer/Hotelsarea";
+import Cusines from "./Component/Navfolder/Panjpeer/Cusines";
+import Wheather from "./Component/Pictures/Gallerymodel/Wheather";
+import Photo from "./Component/Navfolder/Panjpeer/Photo";
+
 
 
 function App() {
@@ -39,6 +46,12 @@ function App() {
         <Route path="Mountain" element={<Mountain />} />
         <Route path="Snowfall" element={<Snowfall />} />
         <Route path="GalleryPage" element={<GalleryPage />} />
+        <Route path="Panjpeer" element={<Panjpeers />} />
+        <Route path="Query" element={<Query />} />
+        <Route path="Hotelarea" element={<Hotelsarea />} />
+        <Route path="Cusines" element={<Cusines />} />
+        <Route path="Wheather" element={<Wheather />} />
+        <Route path="Photo" element={<Photo />} />
       </Routes>
 
    <Footer/>

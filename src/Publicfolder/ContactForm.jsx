@@ -1,7 +1,15 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import axios from "axios";
 
 function ContactForm() {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, []);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",

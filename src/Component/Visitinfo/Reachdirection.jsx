@@ -84,8 +84,8 @@ export default function Reachdirection({
     <div className="max-w-7xl mx-auto p-4 md:p-8 font-sans">
       {/* Header */}
       <div className="mb-10 text-center">
-        <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl mb-4">
-          <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl">
+        <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl mb-4 mt-20">
+          <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl ">
             <Icons.Navigation />
           </div>
         </div>

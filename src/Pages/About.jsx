@@ -3,6 +3,9 @@ import Areainformation from '../Component/About/Areainformation'
 import Introduction from '../Component/About/Introduction'
 import History from '../Component/About/History'
 import PanjpeerPracticalInfo from '../Component/About/PanjpeerPracticalInfo'
+import Wheather from '../Component/Pictures/Gallerymodel/Wheather'
+
+
 
 export default function About() {
   useEffect(() => {
@@ -17,6 +20,8 @@ export default function About() {
         <History/>
         <PanjpeerPracticalInfo/>
       <Areainformation/>
+
+    
 
     </div>
   )

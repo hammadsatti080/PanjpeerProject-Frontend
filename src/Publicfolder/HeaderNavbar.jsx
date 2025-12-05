@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const Navbar = () => {
+const HeaderNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -67,11 +67,12 @@ const Navbar = () => {
   // Inline CSS Styles with enhanced animations
   const styles = {
     navbar: {
-      backgroundColor: scrolled ? 'rgba(44, 85, 48, 0.95)' : '#2c5530',
+      backgroundColor: scrolled ? 'black' : 'black',
       padding: '0 1rem',
       position: 'fixed',
       width: '100%',
       top: 0,
+      marginTop:"75px",
       zIndex: 1000,
       boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.15)' : '0 2px 10px rgba(0,0,0,0.1)',
       transition: 'all 0.3s ease-in-out',
@@ -300,11 +301,9 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { label: 'Home', path: '/' },
-    { label: 'About', path: '/about' },
-    { label: 'Gallery', path: '/gallery' },
-    { label: 'Visit Info', path: '/Visitinfo' },
-    { label: 'Contact', path: '/ContactForm' },
+    { label: 'Panjpeer', path: '/Panjpeer' },
+    { label: 'Hotels', path: '/Hotelarea' },
+    { label: 'Weather', path: '/wheather' },
     { label: 'Query', path: '/Query' },
   ];
 
@@ -344,34 +343,7 @@ const Navbar = () => {
       
       <nav style={styles.navbar} className="nav-container">
         <div style={styles.navContainer}>
-          {/* Logo with hover effect */}
-          <div 
-            style={getNavLogoStyle()}
-            onMouseEnter={() => setHoveredLink('logo')}
-            onMouseLeave={() => setHoveredLink(null)}
-          >
-            <button 
-              onClick={handleHomeNavigation}
-              style={{
-                color: 'white', 
-                textDecoration: 'none', 
-                position: 'relative',
-                background: 'none',
-                border: 'none',
-                fontSize: '1.8rem',
-                fontWeight: 'bold',
-                cursor: 'pointer',
-                fontFamily: 'inherit',
-                padding: 0,
-              }}
-            >
-              Panjpeer
-              <span style={{
-                ...styles.navLogoAfter,
-                width: hoveredLink === 'logo' ? '100%' : '0%'
-              }}></span>
-            </button>
-          </div>
+          
 
           {/* Navigation Menu */}
           <ul style={getNavMenuStyle()}>
@@ -433,4 +405,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default HeaderNavbar;
