@@ -11,7 +11,7 @@ const galleryImages = [
   { id: 6, src: "/About/Mosque.jpg", title: "Prayer Spot", category: "Interior", description: "Main prayer area inside the shrine" },
   { id: 7, src: "/About/Rocks.jpg", title: "Mountain View", category: "Scenery", description: "Panoramic view of surrounding mountains" },
   { id: 8, src: "/About/Area.webp", title: "Architecture", category: "Exterior", description: "Detailed architecture of the shrine" },
-  { id: 9, src: "/About/enterence.webp", title: "Spiritual Gathering", category: "Atmosphere", description: "Devotees gathering for prayers" },
+  { id: 9, src: "/About/Muree2.jpg", title: "Spiritual Gathering", category: "Atmosphere", description: "Devotees gathering for prayers" },
 ];
 
 // GalleryLoader Component - Mobile Optimized

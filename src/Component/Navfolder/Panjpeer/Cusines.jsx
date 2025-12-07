@@ -16,23 +16,23 @@ const CuisineDining = () => {
     { id: 'drinks', name: 'Drinks', icon: '🥤' }
   ];
 
-  // 15 Pakistani dishes
+  // 15 Pakistani dishes with images
   const dishes = [
-    { id: 1, name: "Chicken Biryani", category: "biryani", description: "Fragrant rice with chicken and spices", price: 1200, currency: "PKR", prepTime: "30 mins", spicyLevel: "🌶️🌶️", serves: "2-3", vegetarian: false, traditional: true },
-    { id: 2, name: "Beef Nihari", category: "curry", description: "Slow-cooked beef in spicy gravy", price: 1400, currency: "PKR", prepTime: "4-5 hours", spicyLevel: "🌶️🌶️🌶️", serves: "3-4", vegetarian: false, traditional: true },
-    { id: 3, name: "Chicken Karahi", category: "karahi", description: "Chicken cooked in wok with tomatoes", price: 1100, currency: "PKR", prepTime: "25 mins", spicyLevel: "🌶️🌶️", serves: "2-3", vegetarian: false, popular: true },
-    { id: 4, name: "Seekh Kebabs", category: "bbq", description: "Minced beef kebabs on skewers", price: 800, currency: "PKR", prepTime: "20 mins", spicyLevel: "🌶️🌶️", serves: "4-6", vegetarian: false },
-    { id: 5, name: "Chapli Kabab", category: "bbq", description: "Spiced beef patties", price: 750, currency: "PKR", prepTime: "15 mins", spicyLevel: "🌶️🌶️🌶️", serves: "2", vegetarian: false, traditional: true },
-    { id: 6, name: "Haleem", category: "curry", description: "Slow-cooked lentils and meat", price: 900, currency: "PKR", prepTime: "6-7 hours", spicyLevel: "🌶️", serves: "3-4", vegetarian: true },
-    { id: 7, name: "Fish Karahi", category: "karahi", description: "Fish in spicy tomato gravy", price: 1300, currency: "PKR", prepTime: "20 mins", spicyLevel: "🌶️🌶️", serves: "2-3", vegetarian: false },
-    { id: 8, name: "Mutton Pulao", category: "biryani", description: "Rice with tender mutton", price: 1500, currency: "PKR", prepTime: "40 mins", spicyLevel: "🌶️", serves: "3-4", vegetarian: false },
-    { id: 9, name: "Chicken Tikka", category: "bbq", description: "Grilled chicken in spices", price: 1000, currency: "PKR", prepTime: "30 mins", spicyLevel: "🌶️🌶️", serves: "8-10", vegetarian: false },
-    { id: 10, name: "Kheer", category: "desserts", description: "Rice pudding with dry fruits", price: 400, currency: "PKR", prepTime: "45 mins", spicyLevel: "", serves: "4", vegetarian: true },
-    { id: 11, name: "Gajar ka Halwa", category: "desserts", description: "Carrot pudding", price: 450, currency: "PKR", prepTime: "1 hour", spicyLevel: "", serves: "4", vegetarian: true },
-    { id: 12, name: "Lassi", category: "drinks", description: "Yogurt-based drink", price: 250, currency: "PKR", prepTime: "5 mins", spicyLevel: "", serves: "1", vegetarian: true },
-    { id: 13, name: "Chana Masala", category: "curry", description: "Chickpeas in spicy gravy", price: 650, currency: "PKR", prepTime: "25 mins", spicyLevel: "🌶️🌶️", serves: "2-3", vegetarian: true },
-    { id: 14, name: "Beef Boti", category: "bbq", description: "Grilled beef cubes", price: 950, currency: "PKR", prepTime: "30 mins", spicyLevel: "🌶️🌶️🌶️", serves: "2", vegetarian: false },
-    { id: 15, name: "Zarda", category: "desserts", description: "Sweet yellow rice", price: 500, currency: "PKR", prepTime: "35 mins", spicyLevel: "", serves: "4", vegetarian: true }
+    { id: 1, name: "Chicken Biryani", category: "biryani", description: "Fragrant rice with chicken and spices", price: 1200, currency: "PKR", prepTime: "30 mins", spicyLevel: "🌶️🌶️", serves: "2-3", vegetarian: false, traditional: true, image: "/About/Biryani.jpg" },
+    { id: 2, name: "Beef Nihari", category: "curry", description: "Slow-cooked beef in spicy gravy", price: 1400, currency: "PKR", prepTime: "4-5 hours", spicyLevel: "🌶️🌶️🌶️", serves: "3-4", vegetarian: false, traditional: true, image: "/About/Nihari.jpg" },
+    { id: 3, name: "Chicken Karahi", category: "karahi", description: "Chicken cooked in wok with tomatoes", price: 1100, currency: "PKR", prepTime: "25 mins", spicyLevel: "🌶️🌶️", serves: "2-3", vegetarian: false, popular: true, image: "/About/Nihari.jpg" },
+    { id: 4, name: "Seekh Kebabs", category: "bbq", description: "Minced beef kebabs on skewers", price: 800, currency: "PKR", prepTime: "20 mins", spicyLevel: "🌶️🌶️", serves: "4-6", vegetarian: false, image: "/About/Seek.webp" },
+    { id: 5, name: "Chapli Kabab", category: "bbq", description: "Spiced beef patties", price: 750, currency: "PKR", prepTime: "15 mins", spicyLevel: "🌶️🌶️🌶️", serves: "2", vegetarian: false, traditional: true, image: "/About/Chapli.jpg" },
+    { id: 6, name: "Haleem", category: "curry", description: "Slow-cooked lentils and meat", price: 900, currency: "PKR", prepTime: "6-7 hours", spicyLevel: "🌶️", serves: "3-4", vegetarian: true, image: "/About/Haleem.jpg" },
+    { id: 7, name: "Fish Karahi", category: "karahi", description: "Fish in spicy tomato gravy", price: 1300, currency: "PKR", prepTime: "20 mins", spicyLevel: "🌶️🌶️", serves: "2-3", vegetarian: false, image: "/About/Fish.png" },
+    { id: 8, name: "Mutton Pulao", category: "biryani", description: "Rice with tender mutton", price: 1500, currency: "PKR", prepTime: "40 mins", spicyLevel: "🌶️", serves: "3-4", vegetarian: false, image: "/About/Mutton.jpg" },
+    { id: 9, name: "Chicken Tikka", category: "bbq", description: "Grilled chicken in spices", price: 1000, currency: "PKR", prepTime: "30 mins", spicyLevel: "🌶️🌶️", serves: "8-10", vegetarian: false, image: "/About/Tikka.jpg" },
+    { id: 10, name: "Kheer", category: "desserts", description: "Rice pudding with dry fruits", price: 400, currency: "PKR", prepTime: "45 mins", spicyLevel: "", serves: "4", vegetarian: true, image: "/About/Halwa.jpg" },
+    { id: 11, name: "Gajar ka Halwa", category: "desserts", description: "Carrot pudding", price: 450, currency: "PKR", prepTime: "1 hour", spicyLevel: "", serves: "4", vegetarian: true, image: "/About/Halwa.jpg" },
+    { id: 12, name: "Lassi", category: "drinks", description: "Yogurt-based drink", price: 250, currency: "PKR", prepTime: "5 mins", spicyLevel: "", serves: "1", vegetarian: true, image: "/About/Lassi.webp" },
+    { id: 13, name: "Chana Masala", category: "curry", description: "Chickpeas in spicy gravy", price: 650, currency: "PKR", prepTime: "25 mins", spicyLevel: "🌶️🌶️", serves: "2-3", vegetarian: true, image: "/About/Chana.jpg" },
+    { id: 14, name: "Beef Boti", category: "bbq", description: "Grilled beef cubes", price: 950, currency: "PKR", prepTime: "30 mins", spicyLevel: "🌶️🌶️🌶️", serves: "2", vegetarian: false, image: "/About/Beaf.jpg" },
+    { id: 15, name: "Zarda", category: "desserts", description: "Sweet yellow rice", price: 500, currency: "PKR", prepTime: "35 mins", spicyLevel: "", serves: "4", vegetarian: true, image: "/About/Zarda.webp" }
   ];
 
   const contactInfo = {
@@ -90,6 +90,21 @@ const CuisineDining = () => {
 
             {/* Mobile View - Stacked */}
             <div className="sm:hidden space-y-6">
+              {/* Dish Image */}
+              <div className="relative h-48 w-full bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl overflow-hidden">
+                {selectedDish.image ? (
+                  <img
+                    src={selectedDish.image}
+                    alt={selectedDish.name}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center">
+                    <span className="text-6xl">🍽️</span>
+                  </div>
+                )}
+              </div>
+
               {/* Quick Info */}
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-blue-50 p-3 rounded-xl">
@@ -119,18 +134,25 @@ const CuisineDining = () => {
                   <div className="font-medium">{selectedDish.spicyLevel || "Not Spicy"}</div>
                 </div>
               </div>
-
             </div>
 
             {/* Desktop View - Grid */}
             <div className="hidden sm:grid md:grid-cols-2 gap-8">
               {/* Left Column */}
               <div>
-                <div className="h-64 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl mb-4 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">🍽️</div>
-                    <p className="text-gray-500">{selectedDish.name}</p>
-                  </div>
+                {/* Dish Image */}
+                <div className="h-64 bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl mb-4 overflow-hidden">
+                  {selectedDish.image ? (
+                    <img
+                      src={selectedDish.image}
+                      alt={selectedDish.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <span className="text-6xl">🍽️</span>
+                    </div>
+                  )}
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4">
@@ -165,8 +187,6 @@ const CuisineDining = () => {
                     </div>
                   </div>
                 </div>
-
-                
               </div>
             </div>
           </div>
@@ -255,6 +275,37 @@ const CuisineDining = () => {
                     key={dish.id}
                     className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all border border-gray-100"
                   >
+                    {/* Dish Image */}
+                    <div className="relative h-48 w-full overflow-hidden">
+                      {dish.image ? (
+                        <img
+                          src={dish.image}
+                          alt={dish.name}
+                          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                            e.target.parentElement.innerHTML = `
+                              <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-orange-50 to-amber-50">
+                                <span class="text-4xl">${categories.find(c => c.id === dish.category)?.icon || '🍽️'}</span>
+                              </div>
+                            `;
+                          }}
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-orange-50 to-amber-50">
+                          <span className="text-4xl">{categories.find(c => c.id === dish.category)?.icon || '🍽️'}</span>
+                        </div>
+                      )}
+                      {/* Price Tag on Image */}
+                      <div className="absolute top-3 right-3 bg-black/70 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        {dish.currency} {dish.price}
+                      </div>
+                      {/* Category Tag */}
+                      <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium">
+                        {dish.category.toUpperCase()}
+                      </div>
+                    </div>
+
                     <div className="p-4">
                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-3">
                         <div className="flex-1 mb-2 sm:mb-0">
@@ -264,10 +315,6 @@ const CuisineDining = () => {
                             <span className="text-gray-400">•</span>
                             <span className="text-xs">{dish.spicyLevel || "Not Spicy"}</span>
                           </div>
-                        </div>
-                        <div className="text-left sm:text-right">
-                          <div className="text-xl font-bold text-orange-600">{dish.currency} {dish.price}</div>
-                          <div className="text-xs text-gray-500">{dish.serves}</div>
                         </div>
                       </div>
                       
@@ -285,6 +332,9 @@ const CuisineDining = () => {
                               🏔️ Traditional
                             </span>
                           )}
+                          <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                            {dish.serves}
+                          </span>
                         </div>
                         <button
                           onClick={() => setSelectedDish(dish)}

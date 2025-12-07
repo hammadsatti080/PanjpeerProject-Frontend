@@ -131,7 +131,7 @@ const Introduction = () => {
               <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl relative group border-2 border-transparent bg-gradient-to-br from-green-400 to-emerald-600 bg-clip-border">
   <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-green-400 to-emerald-600 opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
   <img 
-    src="/About/enterence.webp" 
+    src="/About/Muree3.jpg" 
     alt="Panjpeer Rocks"
     className="relative w-full h-full object-cover rounded-3xl transform transition-transform duration-700 group-hover:scale-110 z-10"
   />

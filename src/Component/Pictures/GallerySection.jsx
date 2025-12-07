@@ -16,7 +16,7 @@ export default function GallerySection() {
       count: "85 photos",
       gradient: "from-green-200 to-emerald-300",
       link: "/SunriseUploadandgallery",
-      image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d8/18/ed/the-view-of-panjpeer.jpg?w=1200&h=1200&s=1"
+      image: "/About/Muree2.jpg"
     },
     {
       title: "Seasonal Beauty",
@@ -24,7 +24,7 @@ export default function GallerySection() {
       count: "200+ photos",
       gradient: "from-blue-200 to-cyan-300",
       link: "/Seasonal",
-      image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/d8/18/ed/the-view-of-panjpeer.jpg?w=1200&h=1200&s=1"
+      image: "/About/Muree3.jpg"
     }
   ]
 
