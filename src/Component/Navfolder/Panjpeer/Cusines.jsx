@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 
 const CuisineDining = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, []);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedDish, setSelectedDish] = useState(null);
   const [quantity, setQuantity] = useState(1);

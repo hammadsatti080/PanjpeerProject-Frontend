@@ -8,7 +8,7 @@ const Stayarea = () => {
 navigate('/contactForm')
     }
     const handledetail=()=>{
-        navigate('/contactForm')   
+        navigate('/Hotelarea')   
     }
   const stays = [
     {

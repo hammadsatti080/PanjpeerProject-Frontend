@@ -94,7 +94,7 @@ export default function Foodservices() {
           {/* See All Button - Top Right */}
           <div className="flex flex-wrap gap-3 md:gap-4">
             <Link
-              to="/food/all-services"
+              to="/Cusines"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold py-3 px-6 rounded-full hover:from-orange-600 hover:to-red-600 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -225,9 +225,7 @@ export default function Foodservices() {
                           <span className="text-gray-300">•</span>
                           <span className="text-gray-700 font-medium">{item.priceRange}</span>
                         </div>
-                        <span className="text-orange-500 text-sm font-semibold hover:underline">
-                          View →
-                        </span>
+                        
                       </div>
                     </div>
                   </div>

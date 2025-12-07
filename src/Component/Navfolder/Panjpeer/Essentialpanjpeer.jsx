@@ -174,19 +174,19 @@ const EssentialPanjpeer = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white p-4 md:p-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-6 md:mb-12">
-          <h1 className="text-2xl md:text-5xl font-bold text-gray-800 mb-3 md:mb-4">
+    <div className="bg-gradient-to-b from-gray-50 to-white">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-6">
+        {/* Header - Compact */}
+        <div className="text-center mb-4 md:mb-6">
+          <h1 className="text-xl md:text-3xl font-bold text-gray-800 mb-2">
             Essential <span className="text-blue-600">Panjpeer</span>
           </h1>
-          <p className="text-gray-600 text-base md:text-xl mb-6 md:mb-8 max-w-2xl mx-auto px-2">
+          <p className="text-gray-600 text-sm md:text-base mb-4 max-w-2xl mx-auto">
             Discover the best of Panjpeer. Pick a category to filter your recommendations.
           </p>
 
-          {/* Category Filter Buttons - Mobile: Vertical, Desktop: Horizontal */}
-          <div className="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-6 mb-8 md:mb-10">
+          {/* Category Filter Buttons */}
+          <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 mb-6">
             {categories.map((category) => (
               <button
                 key={category.id}
@@ -194,61 +194,49 @@ const EssentialPanjpeer = () => {
                   setActiveCategory(category.name);
                   setSelectedCard(null);
                 }}
-                className={`w-full md:w-auto flex items-center justify-center md:justify-start gap-3 px-5 py-4 md:px-7 md:py-4 rounded-xl md:rounded-2xl transition-all duration-300 ${
+                className={`w-full md:w-auto flex items-center justify-center md:justify-start gap-2 px-4 py-3 md:px-5 md:py-3 rounded-lg transition-all duration-300 ${
                   activeCategory === category.name
                     ? 'bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg shadow-blue-500/30'
                     : 'bg-white text-gray-700 border border-gray-200 hover:border-blue-300 hover:shadow-md'
                 }`}
               >
-                <span className="text-2xl md:text-2xl">{category.icon}</span>
-                <span className="font-semibold text-base md:text-lg">{category.name}</span>
+                <span className="text-xl">{category.icon}</span>
+                <span className="font-semibold text-sm md:text-base">{category.name}</span>
               </button>
             ))}
           </div>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+        {/* Cards Grid - Compact */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
           {cardsData[getActiveCategoryKey()]?.map((card) => (
             <div
               key={card.id}
               onClick={() => handleCardClick(card)}
-              className={`${card.color} border-2 rounded-2xl p-5 md:p-6 cursor-pointer transition-all duration-300 transform hover:-translate-y-1 md:hover:-translate-y-2 hover:shadow-xl md:hover:shadow-2xl group`}
+              className={`${card.color} border rounded-xl p-4 cursor-pointer transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg group min-h-[180px] flex flex-col`}
             >
               {/* Card Icon */}
-              <div className={`w-14 h-14 md:w-16 md:h-16 rounded-xl ${card.textColor} flex items-center justify-center text-2xl md:text-3xl mb-4 md:mb-5 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`w-12 h-12 rounded-lg ${card.textColor} flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform duration-300`}>
                 {card.icon}
               </div>
 
               {/* Card Title as Clickable Link */}
               <h3 
                 onClick={(e) => handleTitleClick(card, e)}
-                className={`text-lg md:text-xl font-bold mb-2 md:mb-3 ${card.textColor} cursor-pointer hover:underline hover:underline-offset-3 md:hover:underline-offset-4 transition-all duration-200`}
+                className={`text-base md:text-lg font-bold mb-1 ${card.textColor} cursor-pointer hover:underline hover:underline-offset-2 transition-all duration-200 line-clamp-1`}
               >
                 {card.title}
               </h3>
 
               {/* Card Description */}
-              <p className="text-gray-600 text-sm md:text-base mb-5 md:mb-6 leading-relaxed">
+              <p className="text-gray-600 text-xs md:text-sm mb-3 leading-relaxed line-clamp-2 flex-grow">
                 {card.description}
               </p>
 
-              {/* Action Buttons */}
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 md:gap-0">
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    navigate(card.pageLink);
-                  }}
-                  className={`${card.textColor} font-semibold hover:underline flex items-center justify-center gap-2 px-4 py-2 rounded-lg hover:bg-opacity-10 ${card.color.split(' ')[0]} transition-all duration-200 text-sm md:text-base`}
-                >
-                  View Full Page
-                  <svg className="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                  </svg>
-                </button>
-                <span className="text-gray-400 group-hover:text-gray-600 transition-colors text-xs md:text-sm text-center md:text-right">
-                  Click card for preview →
+              {/* View Details Button - Small */}
+              <div className="mt-auto">
+                <span className={`inline-block text-xs ${card.textColor} font-medium`}>
+                  Click to view details →
                 </span>
               </div>
             </div>
@@ -258,55 +246,47 @@ const EssentialPanjpeer = () => {
         {/* Selected Card Details Modal */}
         {selectedCard && (
           <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 animate-fadeIn">
-            <div className="bg-white rounded-2xl md:rounded-3xl max-w-2xl w-full p-5 md:p-10 shadow-2xl animate-slideUp max-h-[90vh] overflow-y-auto">
+            <div className="bg-white rounded-xl md:rounded-2xl max-w-md w-full p-5 md:p-6 shadow-2xl animate-slideUp max-h-[85vh] overflow-y-auto">
               {/* Modal Header */}
-              <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 md:gap-0 mb-6 md:mb-8">
-                <div className="flex items-start gap-3 md:gap-4">
-                  <div className={`w-16 h-16 md:w-20 md:h-20 rounded-xl md:rounded-2xl ${selectedCard.color} flex items-center justify-center text-3xl md:text-4xl`}>
+              <div className="flex justify-between items-start mb-4">
+                <div className="flex items-start gap-3">
+                  <div className={`w-12 h-12 rounded-lg ${selectedCard.color} flex items-center justify-center text-2xl`}>
                     {selectedCard.icon}
                   </div>
-                  <div className="flex-1">
+                  <div>
                     <h2 
                       onClick={() => navigate(selectedCard.pageLink)}
-                      className={`text-2xl md:text-3xl font-bold ${selectedCard.textColor} mb-1 md:mb-2 cursor-pointer hover:underline hover:underline-offset-3 md:hover:underline-offset-4 transition-all duration-200`}
+                      className={`text-lg md:text-xl font-bold ${selectedCard.textColor} mb-1 cursor-pointer hover:underline hover:underline-offset-2 transition-all duration-200`}
                     >
                       {selectedCard.title}
                     </h2>
-                    <p className="text-gray-600 text-sm md:text-base">{selectedCard.description}</p>
+                    <p className="text-gray-600 text-sm">{selectedCard.description}</p>
                   </div>
                 </div>
                 <button
                   onClick={closeCardDetails}
-                  className="self-end md:self-start text-gray-400 hover:text-gray-700 p-2 rounded-full hover:bg-gray-100 transition-colors"
+                  className="text-gray-400 hover:text-gray-700 p-1 rounded-full hover:bg-gray-100 transition-colors"
                 >
-                  <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
 
               {/* Modal Content */}
-              <div className="mb-6 md:mb-8">
-                <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-3 md:mb-4">Details</h3>
-                <p className="text-gray-700 text-base md:text-lg leading-relaxed">
+              <div className="mb-4">
+                <h3 className="text-base font-semibold text-gray-800 mb-2">Details</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
                   {selectedCard.details}
                 </p>
               </div>
 
               {/* Modal Actions */}
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
-                <button
-                  onClick={handleViewFullPage}
-                  className={`${selectedCard.textColor} bg-gradient-to-r from-white to-white border-2 ${selectedCard.color.split(' ')[0].replace('bg-', 'border-')} font-semibold py-3 px-5 md:py-3 md:px-6 rounded-xl text-center hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base`}
-                >
-                  <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                  Go to {selectedCard.title} Page
-                </button>
+              <div className="flex flex-col sm:flex-row gap-2">
+            
                 <button
                   onClick={closeCardDetails}
-                  className="bg-gray-100 text-gray-700 font-semibold py-3 px-5 md:py-3 md:px-6 rounded-xl hover:bg-gray-200 transition-colors duration-300 text-sm md:text-base"
+                  className="bg-gray-100 text-gray-700 font-semibold py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors duration-300 text-xs md:text-sm"
                 >
                   Close Preview
                 </button>
@@ -315,36 +295,47 @@ const EssentialPanjpeer = () => {
           </div>
         )}
 
-        {/* Instructions */}
-        
+        {/* Custom Animations */}
+        <style jsx>{`
+          @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+          }
+          
+          @keyframes slideUp {
+            from { 
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to { 
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          
+          .animate-fadeIn {
+            animation: fadeIn 0.2s ease-out;
+          }
+          
+          .animate-slideUp {
+            animation: slideUp 0.3s ease-out;
+          }
+          
+          .line-clamp-1 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+          }
+          
+          .line-clamp-2 {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+          }
+        `}</style>
       </div>
-
-      {/* Custom Animations */}
-      <style jsx>{`
-        @keyframes fadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        
-        @keyframes slideUp {
-          from { 
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to { 
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        
-        .animate-fadeIn {
-          animation: fadeIn 0.3s ease-out;
-        }
-        
-        .animate-slideUp {
-          animation: slideUp 0.4s ease-out;
-        }
-      `}</style>
     </div>
   );
 };
